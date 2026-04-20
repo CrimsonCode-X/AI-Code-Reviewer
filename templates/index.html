@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.js"></script>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="AI CODE REVIEWER">AI CODE REVIEWER</h1>
+            <p class="subtitle" style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-muted);">Intelligent Source Code Analysis & Optimization</p>
+        </header>
+
+        <main class="dashboard">
+            <div class="editor-section panel">
+                <div class="panel-header">
+                    <h4>Source Code</h4>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <select id="language-select">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                            <option value="go">Go</option>
+                        </select>
+                        <button id="analyze-btn" class="cyber-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            <span class="button-text">ANALYZE CODE</span>
+                            <span class="button-glitch"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="editor-container"></div>
+            </div>
+
+            <div class="results-section panel">
+                <div class="panel-header">
+                    <h4>Analysis Results</h4>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="bugs">Bugs</button>
+                        <button class="tab-btn" data-target="optimizations">Optimizations</button>
+                        <button class="tab-btn" data-target="quality">Quality</button>
+                    </div>
+                </div>
+                
+                <div class="results-content">
+                    <div id="loading" class="hidden">
+                        <div class="spinner"></div>
+                        <p>Processing via Gemini AI...</p>
+                    </div>
+                    
+                    <div id="bugs" class="tab-content active">
+                        <div class="placeholder-text">Run analysis to see bug detection results...</div>
+                    </div>
+                    <div id="optimizations" class="tab-content">
+                        <div class="placeholder-text">Run analysis to see optimization suggestions...</div>
+                    </div>
+                    <div id="quality" class="tab-content">
+                        <div class="placeholder-text">Run analysis to see code quality enhancements...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Powered by Gemini AI | Built with ❤️ by Antigravity</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
