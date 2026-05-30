@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Code Reviewer</title>
+    <meta name="description" content="Intelligent AI-powered source code analysis and optimization.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
     <!-- Monaco Editor -->
@@ -18,8 +19,15 @@
 
     <div class="container">
         <header>
+            <div class="user-bar">
+                <div class="user-info">
+                    <span class="user-dot"></span>
+                    <span class="user-name">{{ current_user.username }}</span>
+                </div>
+                <a href="/logout" class="logout-btn" id="logout-link">Sign Out</a>
+            </div>
             <h1 class="glitch" data-text="AI CODE REVIEWER">AI CODE REVIEWER</h1>
-            <p class="subtitle" style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-muted);">Intelligent Source Code Analysis & Optimization</p>
+            <p class="subtitle" style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-muted);">Intelligent Source Code Analysis &amp; Optimization</p>
         </header>
 
         <main class="dashboard">
