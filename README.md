@@ -60,7 +60,7 @@ Built as part of the **VISION X Hackathon** — "Turning Vision Into Reality".
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ai-code-reviewer.git
+   git clone https://github.com/CrimsonCode-X/ai-code-reviewer.git
    cd ai-code-reviewer
    ```
 
